@@ -5,8 +5,8 @@ class nix:
           def position_item(self,position: int,item: str,display_checker: bool,custom_style: str):
                     
                     _dict_custom_={
-                              "":"*",
-                              "pass":"",
+                              f"{custom_style}-dont":"*",
+                              f"{custom_style}-never":"",
                               custom_style:custom_style
                     }
                     
