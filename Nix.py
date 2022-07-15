@@ -15,18 +15,18 @@ class nix:
                     d_management_display.store_(display_checker,position)
           
 class nix_list:
-          def add_styles(self,reciever_list: set,sender_list: set):
+          def add_styles(self,reciever_list: list,sender_list: list):
                     reciever_list.append("*" * 2)   
                     for item in sender_list:
                               reciever_list.append(item)
                     reciever_list.append("*" * 2)
                               
-          def remove_styles(self,remove_list: set,items_to_remove: set):
+          def remove_styles(self,remove_list: list,items_to_remove: list):
                     for item in items_to_remove:
                               if item in remove_list:
                                         remove_list.remove(item) 
           
-          def reveal_item_position(self,items_to_reveal: set,list_containing_item: set,list_name: str):
+          def reveal_item_position(self,items_to_reveal: list,list_containing_item: list,list_name: str):
                     for item in items_to_reveal:
                               print(f"position (item:{item}) (list:{list_name}):{list_containing_item.index(item)}")
                               
