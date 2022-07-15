@@ -5,9 +5,9 @@ class nix:
           def position_item(self,position: int,item: str,display_checker: bool,custom_style: str):
                     
                     _dict_custom_={
-                              f"{custom_style}-dont":"*",
-                              f"{custom_style}-never":"",
-                              custom_style:custom_style
+                              f"-dont":"*",
+                              f"-never":"",
+                              f"{custom_style}-agree":custom_style
                     }
                     
                     print(f"{' ' * position} {_dict_custom_.get(custom_style)} {item} {_dict_custom_.get(custom_style)}")
