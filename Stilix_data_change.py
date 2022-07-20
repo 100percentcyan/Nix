@@ -29,11 +29,7 @@ class change_add:
                     thing_to_set=set()
                     
           def data_and_add(self,things_to_add: list,data_type: str,adder):
-                    _dict_data_type_={
-                              "tuple":tuple(),
-                              "set":set(),
-                              "list":list()
-                    }
+                    _dict_data_type_={"tuple":tuple(),"set":set(),"list":list()}
                     adder=list()
                     STILIX_LIST.add_styles(adder,things_to_add)
                     adder=_dict_data_type_.get(data_type)
