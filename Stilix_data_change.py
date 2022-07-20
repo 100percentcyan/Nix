@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-
+from Stilix import STILIX_LIST
 @dataclass
 class empty_space:
           list_: list
@@ -19,5 +19,26 @@ class change_data:
                     save_list_on.append(thing_to_list)
                     thing_to_list=list(thing_to_list)
 
+class change_add:
+          def add_and_tuple(self,thing_to_tuple: list,things_to_add: list):
+                    STILIX_LIST.add_styles(thing_to_tuple,things_to_add)
+                    thing_to_tuple=tuple()
+                    
+          def add_and_set(self,thing_to_set: list,things_to_add_set: list):
+                    STILIX_LIST.add_styles(thing_to_set,things_to_add_set)
+                    thing_to_set=set()
+                    
+          def data_and_add(self,things_to_add: list,data_type: str,adder):
+                    _dict_data_type_={
+                              "tuple":tuple(),
+                              "set":set(),
+                              "list":list()
+                    }
+                    adder=list()
+                    STILIX_LIST.add_styles(adder,things_to_add)
+                    adder=_dict_data_type_.get(data_type)
+
+
 data_change=change_data()
 
+add_change=change_add()
