@@ -23,16 +23,19 @@ class change_add:
           def add_and_tuple(self,thing_to_tuple: list,things_to_add: list):
                     STILIX_LIST.add_styles(thing_to_tuple,things_to_add)
                     thing_to_tuple=tuple()
+                    empty_list.list_.append(thing_to_tuple)
                     
           def add_and_set(self,thing_to_set: list,things_to_add_set: list):
                     STILIX_LIST.add_styles(thing_to_set,things_to_add_set)
-                    thing_to_set=set()
+                    thing_to_set=set() 
+                    empty_list.list_.append(thing_to_set)
                     
           def data_and_add(self,things_to_add: list,data_type: str,adder):
                     _dict_data_type_={"tuple":tuple(),"set":set(),"list":list()}
                     adder=list()
                     STILIX_LIST.add_styles(adder,things_to_add)
-                    adder=_dict_data_type_.get(data_type)
+                    adder=_dict_data_type_.get(data_type) 
+                    empty_list.list_.append(adder)
 
 
 data_change=change_data()
