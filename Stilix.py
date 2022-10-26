@@ -1,4 +1,4 @@
-
+from dataclasses import dataclass
 
 from d_tool import d_management_display
 class stilix:
@@ -19,10 +19,8 @@ class stilix:
           
 class stilix_list:
           def add_styles(self,reciever_list: list,sender_list: list):
-                    reciever_list.append("*" * 2)   
                     for item in sender_list:
                               reciever_list.append(item)
-                    reciever_list.append("*" * 2)
                               
           def remove_styles(self,remove_list: list,items_to_remove: list):
                     for item in items_to_remove:
@@ -32,6 +30,14 @@ class stilix_list:
           def reveal_item_position(self,items_to_reveal: list,list_containing_item: list,list_name: str):
                     for item in items_to_reveal:
                               print(f"position (item:{item}) (list:{list_name}):{list_containing_item.index(item)}")
+                              
+          def display_all(self,list_to_display_all: list):
+                    for item in list_to_display_all:
+                              print(item)
+          
+          def display_all_horizontal(self,list_to_display_all: list):
+                    for item in list_to_display_all:
+                              print(item,end="")
 
 class stilix_list_count:
           def list_length(self,list_length: list):
@@ -40,18 +46,12 @@ class stilix_list_count:
           def count_list(self,list_count: list,clone: str):
                     print(list_count.count(clone))
                     
-          def no_style_show(self,list_no_style: list):
-                    for i in list_no_style.count("**"):
-                              list_no_style.remove("**")
-                              
-                              if list_no_style.count("**") > 2:
-                                        list_no_style.remove(list_no_style[0])
-                                        list_no_style.remove(list_no_style[len(list_no_style)])
-                     
-STILIX=stilix()
 
-STILIX_LIST=stilix_list()    
+STILIX = stilix()
+
+STILIX_LIST = stilix_list()    
 
 STILIX_LIST_COUNT = stilix_list_count()
 
-                
+
+

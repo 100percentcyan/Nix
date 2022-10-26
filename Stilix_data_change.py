@@ -3,6 +3,12 @@ from Stilix import STILIX_LIST
 @dataclass
 class empty_space:
           list_: list
+          def check_reset(self,list_to_check_reset: list):
+                    dict_check = {
+                              0:True
+                    }
+                    print(dict_check.get(len(list_to_check_reset)))
+                    
 empty_list=empty_space([])
 
 class change_data:

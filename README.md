@@ -1,4 +1,2 @@
 # Stilix
-Make your projects like the stars with Stilix
-
-
+design and practicalness
