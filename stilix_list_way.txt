@@ -1,4 +1,0 @@
-
-
-list = len
-stilix_list = len + 2
