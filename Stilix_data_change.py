@@ -35,14 +35,6 @@ class change_add:
           def add_and_set(self,thing_to_set: list,things_to_add_set: list):
                     STILIX_LIST.add_styles(thing_to_set,things_to_add_set)
                     data_change.set_save(thing_to_set,empty_list.list_)
-                    
-          def data_and_add(self,things_to_add: list,data_type: str,adder):
-                    _dict_data_type_={"tuple":tuple(),"set":set(),"list":list()}
-                    adder=list()
-                    STILIX_LIST.add_styles(adder,things_to_add)
-                    adder=_dict_data_type_.get(data_type) 
-                    empty_list.list_.append(adder)
-
-
 
 add_change=change_add()
+
