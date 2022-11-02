@@ -1,20 +1,5 @@
 from dataclasses import dataclass
 
-from d_tool import d_management_display
-class stilix:
-          def position_item(self,position: int,item: str,display_checker: bool,custom_style: str,custom: str):
-                    
-                    _dict_custom_={
-                              f"-dont":"*",
-                              f"-never":"",
-                              f"{custom_style}-agree":custom_style
-                    }
-                    
-                    
-                    print(f"{' ' * position} {_dict_custom_.get(custom_style)} {item} {_dict_custom_.get(custom_style)}")
-                              
-                    d_management_display.store_(display_checker,position)
-    
 
           
 class stilix_list:
@@ -40,18 +25,30 @@ class stilix_list:
                               print(item,end="")
 
 class stilix_list_count:
-          def list_length(self,list_length: list):
-                    print(len(list_length))
-                    
-          def count_list(self,list_count: list,clone: str):
-                    print(list_count.count(clone))
-                    
-
-STILIX = stilix()
-
+          def list_length(self,list_: list):
+                    return len(list_)
+          def list_count(self,list_: list,desired_count: str):
+                    return list_.count(list_)
+          
 STILIX_LIST = stilix_list()    
 
 STILIX_LIST_COUNT = stilix_list_count()
 
+@dataclass
+class stilix:
+          style: str = " * "
+          def split_(self,storage: list,storage_to: list):
+                    STILIX_LIST.add_styles(storage_to,storage)
+                    
+          def insert_style(self,storage: list):
+                    value = 1
+                    while value < STILIX_LIST_COUNT.list_length(storage):
+                              storage.insert(value,self.style)
+                              value += 2
+                               
+          def change_style(self,desired_style: str):
+                    self.style = f" {desired_style} "
 
+STILIX = stilix([])
 
+ 
