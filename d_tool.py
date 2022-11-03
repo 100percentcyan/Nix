@@ -11,7 +11,7 @@ class d_display:
 
 class my_class(ABC):
           @abstractmethod
-          def save_(self):
+          def save(self):
                     pass
           
           @abstractmethod
@@ -23,3 +23,27 @@ class my_class(ABC):
                     pass
           
 d_management_display = d_display()
+
+'''
+The d_management_display object displays an item depending on the boolean entered.
+The my_class abstract class can be used to make custom classes based on the methods save_ , process and display.
+my_class indicates that it is your class that you coded.
+
+def do_(my_class):
+          def save(self,something):
+                    #some code
+                    
+          def process(self,something):
+                    #some code
+          
+          def display(self,something):
+                    #some code
+
+value = 1
+t = False
+
+if value == 1:
+          t = True
+          d_management_display.store_(t,value)
+
+'''

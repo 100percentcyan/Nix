@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from Stilix import STILIX_LIST
+from Stilix import STILIX_LIST , STILIX_LIST_COUNT
 @dataclass
 class empty_space:
           list_: list
@@ -7,9 +7,26 @@ class empty_space:
                     dict_check = {
                               0:True
                     }
-                    print(dict_check.get(len(list_to_check_reset)))
+                    print(dict_check.get(STILIX_LIST_COUNT.list_length(list_to_check_reset)))
                     
 empty_list=empty_space([])
+
+'''
+The empty_list object contains an empty list which can be used on anything.
+The check_reset mehod of the empty list object checks if the desired list is empty.
+
+empty_list.list_ = ["a"]
+
+empty_list.check_reset(empty_list.list_)
+
+False
+
+w = []
+
+empty_list.check_reset(w)
+
+True
+'''
 
 class change_data:
           def normal_save(self,thing_to_save: list,save_on: empty_list.list_):
@@ -27,14 +44,27 @@ class change_data:
 
 data_change=change_data()
 
-class change_add:
-          def add_and_tuple(self,thing_to_tuple: list,things_to_add: list):
-                    STILIX_LIST.add_styles(thing_to_tuple,things_to_add)
-                    data_change.tuple_save(thing_to_tuple,empty_list.list_)
-                    
-          def add_and_set(self,thing_to_set: list,things_to_add_set: list):
-                    STILIX_LIST.add_styles(thing_to_set,things_to_add_set)
-                    data_change.set_save(thing_to_set,empty_list.list_)
+'''
+The data_change object saves a list as a different data structure like tuples or sets in a list.
+The data_change.normal_save method can be used to just save a list in another list without changing it.
+The data_change.tuple_save method can be used to save a list as a tuple in another list.
+The data_change.set_save method can be used to save a list as a set in another list.
 
-add_change=change_add()
+b = []
+a = []
+data_change.normal_save(a,b)
+print(b)
 
+[[]]
+
+data_change.tuple_save(a,b)
+print(b)
+
+[()]
+
+data_change.set_save(a,b)
+print(b)
+
+[{}]
+
+'''
